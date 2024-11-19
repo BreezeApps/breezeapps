@@ -5,16 +5,9 @@ const REPOS_API_URL = `https://api.github.com/orgs/${ORG_NAME}/repos`;
 const projectList = document.getElementById("project-list");
 const EXCLUDED_REPOS = ["site"]; // Liste des dépôts à exclure
 
-async function fetchYear() {
-    const apiURL = `${ORG_API_URL}/Yapuka/releases/latest`;
-    
+async function fetchYear() {    
     try {
-        const response = await fetch(apiURL);
-        const data = await response.json();
-
-        const commit = data.commit;
-        const date = commit.author.date
-        document.getElementById("year").innerText = new Date(date).getFullYear()
+        document.getElementById("year").innerText = new Date().getFullYear()
     } catch (error) {
         document.getElementById("year").innerText =  new Date().getFullYear()
     }
