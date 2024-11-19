@@ -1,11 +1,24 @@
+import "./index.css"
+
 // Configuration
 const ORG_NAME = "BreezeApps"; // Remplacez par votre nom d'organisation GitHub
 const ORG_API_URL = `https://api.github.com/orgs/${ORG_NAME}`;
 const REPOS_API_URL = `https://api.github.com/orgs/${ORG_NAME}/repos`;
 const projectList = document.getElementById("project-list");
-const EXCLUDED_REPOS = ["site"]; // Liste des dépôts à exclure
+const EXCLUDED_REPOS = ["site", ".github"]; // Liste des dépôts à exclure
 
-async function fetchYear() {    
+import { animate, stagger } from "@motionone/dom";
+
+function animateProjects() {
+    const items = document.querySelectorAll("li");
+    animate(items, { opacity: [0, 1], transform: ["translateY(10px)", "translateY(0px)"] }, {
+        duration: 0.6,
+        easing: "ease-out",
+        delay: stagger(0.1),
+    });
+}
+
+async function fetchYear() {
     try {
         document.getElementById("year").innerText = new Date().getFullYear()
     } catch (error) {
@@ -49,6 +62,8 @@ async function fetchProjects() {
             `;
             projectList.appendChild(listItem);
         });
+        // Animer les projets après leur ajout
+        animateProjects();
     } catch (error) {
         console.error("Error fetching repositories:", error);
     }
