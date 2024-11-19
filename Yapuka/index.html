@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yapuka</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link href="../style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#">
+                <img src="assets/logo.png" alt="Logo Yapuka" class="h-12 w-auto">
+            </a>
+            <nav class="flex space-x-4">
+                <a href="#features" class="text-gray-600 hover:text-blue-500 transition">Fonctionnalités</a>
+                <a href="#screenshots" class="text-gray-600 hover:text-blue-500 transition">Screenshots</a>
+                <a href="#download" class="text-gray-600 hover:text-blue-500 transition">Télécharger</a>
+                <a href="https://github.com/Marvideo2009/Yapuka" target="_blank" class="text-gray-600 hover:text-blue-500 transition"><img src="./assets/github.png" alt="Gihub" class="w-6 h-auto"></a>
+            </nav>
+        </div>
+    </header>
+    <section class="bg-blue-600 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-2">Organisez votre vie avec Yapuka</h2>
+            <p class="text-lg mb-8">L'application ultime pour gérer vos tâches et listes.</p>
+            <a href="#download" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">Télécharger l'application</a>
+        </div>
+    </section>
+    <section id="features" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Fonctionnalités Principales</h2>
+            <div class="grid grid-cols-1 gap-12"> <!-- md:grid-cols-2 -->
+                <div class="text-center transform hover:scale-105 transition duration-300">
+                    <img src="./assets/task.png" class="w-36 inline " alt="Icon" class="mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Gestion de Tâches</h3>
+                    <p class="text-gray-600">Créez, organisez et complétez vos tâches facilement.</p>
+                </div>
+                <!-- <div class="text-center transform hover:scale-105 transition duration-300">
+                    <img src="./assets/reminder.png" class="w-36 inline " alt="Icon" class="mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Rappels et Notifications</h3>
+                    <p class="text-gray-600">Ne manquez jamais une tâche importante grâce aux rappels.</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <section id="screenshots" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-8">Découvrez Yapuka</h2>
+            <div class="flex justify-center">
+                <img src="./assets/screenshots.png" alt="Capture d'écran de Yapuka" class="rounded-lg shadow-lg hover:opacity-80 transition">
+            </div>
+        </div>
+    </section>
+    <section id="download" class="bg-blue-600 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prêt à essayer Yapuka ?</h2>
+            <p class="text-lg mb-8">Téléchargez l'application dès aujourd'hui et commencez à organiser vos tâches efficacement.</p>
+            <div class="mt-6 space-x-4">
+                <a href="#" id="downloadWindows" target="_blank" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">Télécharger pour Windows</a>
+                <a href="#" id="downloadLinuxAppImage" target="_blank" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">Télécharger pour Linux (AppImage)</a>
+                <a href="#" id="downloadLinuxDeb" target="_blank" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105">Télécharger pour Linux (DEB)</a>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="year"></span> Yapuka. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./index.js"></script>
+</body>
+</html>
