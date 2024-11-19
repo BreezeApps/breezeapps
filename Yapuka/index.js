@@ -1,5 +1,5 @@
 async function fetchYear() {
-    const apiURL = "https://api.github.com/orgs/BreezeApps/Yapuka/releases/latest";
+    const apiURL = "https://api.github.com/repos/BreezeApps/Yapuka/releases/latest";
     
     try {
         const response = await fetch(apiURL);
@@ -14,7 +14,7 @@ async function fetchYear() {
 }
 
 async function fetchLatestRelease() {
-    const apiURL = "https://api.github.com/orgs/BreezeApps/Yapuka/releases/latest";
+    const apiURL = "https://api.github.com/repos/BreezeApps/Yapuka/releases/latest";
     
     try {
         const response = await fetch(apiURL);
